@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import ViewPropTypes from './config/ViewPropTypes';
-import Layout from './Layout';
+import Layout from 'react-native-tab-navigator/Layout';
 
 export default class TabBar extends React.Component {
   static propTypes = {
