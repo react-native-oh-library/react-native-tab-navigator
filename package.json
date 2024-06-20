@@ -1,11 +1,19 @@
 {
-  "name": "react-native-tab-navigator",
-  "version": "0.3.4",
+  "name": "@react-native-oh-tpl/react-native-tab-navigator",
+  "version": "0.3.4-0.0.1",
   "description": "A tab bar that switches between scenes, written in JS for cross-platform support",
-  "main": "TabNavigator.js",
+  "main": "TabNavigator",
+  "harmony": {
+    "alias": "react-native-tab-navigator"
+  },
+  "files": ["config/*", "*.js", "harmony"],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/exponentjs/react-native-tab-navigator.git"
+    "url": "git+https://github.com/react-native-oh-library/react-native-tab-navigator.git"
+  },
+  "publishConfig": { 
+    "registry": "https://registry.npmjs.org/", 
+    "access": "public" 
   },
   "keywords": [
     "react-native",
@@ -22,6 +30,7 @@
   "homepage": "https://github.com/exponentjs/react-native-tab-navigator#readme",
   "dependencies": {
     "immutable": "^3.8.1",
-    "prop-types": "^15.5.10"
+    "prop-types": "^15.5.10",
+    "react-native-tab-navigator": "^0.3.4"
   }
 }
