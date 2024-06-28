@@ -34,14 +34,19 @@ export default class TabNavigator extends React.Component {
     this._renderTab = this._renderTab.bind(this);
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    let { renderedSceneKeys } = this.state;
-    this.setState({
-      renderedSceneKeys: this._updateRenderedSceneKeys(
-        nextProps.children,
-        renderedSceneKeys,
-      ),
+  static getDerivedStateFromProps(nextProps, prevState) {
+    let { renderedSceneKeys } = prevState;
+    let newSceneKeys = Set().asMutable();
+    React.Children.forEach(nextProps.children, (item, index) => {
+      if (item === null) {
+        return;
+      }
+      let key = `scene-${(item.key !== null) ? item.key : index}`;
+      if (renderedSceneKeys.has(key) || item.props.selected) {
+        newSceneKeys.add(key);
+      }
     });
+    return { renderedSceneKeys: newSceneKeys.asImmutable() };
   }
 
   _getSceneKey(item, index): string {
