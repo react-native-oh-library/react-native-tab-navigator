@@ -1,96 +1,13 @@
-# TabNavigator
-A tab bar that switches between scenes, written in JS for cross-platform support. It works on iOS and Android.
+# @react-native-oh-tpl/react-native-tab-navigator
 
-This component is compatible with React Native 0.16 and newer.
+本项目基于 [react-native-tab-navigator](https://github.com/ptomasroos/react-native-tab-navigator)
 
-The look and feel is slightly different than the native navigator but it is better in some ways. Also it is pure JavaScript.
+## 文档地址 / Documentation URL 
 
-Note: This is **not** the same `TabNavigation` component that is used in [ExNavigation](https://github.com/exponentjs/ex-navigation), the API and implementations are slightly different -- react-native-tab-navigator stands on its own and does not depend on any other navigation library.
+[中文 / Chinese](https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-cn/react-native-tab-navigator.md)
 
-## Demo
-For demo, please check the example folder
+[英文 / English](https://gitee.com/react-native-oh-library/usage-docs/blob/master/zh-en/react-native-tab-navigator.md)
 
-<img src="./demo.gif" alt="demo" style="height: 600px;"/>
+## 请悉知 / Acknowledgements
 
-Install
--------
-
-Make sure that you are in your React Native project directory and run:
-
-```npm install react-native-tab-navigator --save```
-
-## Usage
-
-Import TabNavigator as a JavaScript module:
-
-```js
-import TabNavigator from 'react-native-tab-navigator';
-```
-
-This is an example of how to use the component and some of the commonly used props that it supports:
-
-```js
-<TabNavigator>
-  <TabNavigator.Item
-    selected={this.state.selectedTab === 'home'}
-    title="Home"
-    renderIcon={() => <Image source={...} />}
-    renderSelectedIcon={() => <Image source={...} />}
-    badgeText="1"
-    onPress={() => this.setState({ selectedTab: 'home' })}>
-    {homeView}
-  </TabNavigator.Item>
-  <TabNavigator.Item
-    selected={this.state.selectedTab === 'profile'}
-    title="Profile"
-    renderIcon={() => <Image source={...} />}
-    renderSelectedIcon={() => <Image source={...} />}
-    renderBadge={() => <CustomBadgeView />}
-    onPress={() => this.setState({ selectedTab: 'profile' })}>
-    {profileView}
-  </TabNavigator.Item>
-</TabNavigator>
-```
-
-See TabNavigatorItem's supported props for more info.
-
-### Hiding the Tab Bar
-
-You can hide the tab bar by using styles. For example:
-```js
-let tabBarHeight = 0;
-<TabNavigator
-  tabBarStyle={{ height: tabBarHeight, overflow: 'hidden' }}
-  sceneStyle={{ paddingBottom: tabBarHeight }}
-/>
-```
-
-### Props
-
-TabNavigator props
-
-| prop | default | type | description |
-| ---- | ---- | ----| ---- |
-| sceneStyle | inherited | object (style) | define for rendered scene |
-| tabBarStyle | inherited | object (style) | define style for TabBar |
-| tabBarShadowStyle | inherited | object (style) | define shadow style for tabBar |
-| hidesTabTouch | false | boolean | disable onPress opacity for Tab |
-
-TabNavigator.Item props
-
-| prop | default | type | description |
-| ---- | ---- | ----| ---- |
-| renderIcon | none | function | returns Item icon |
-| renderSelectedIcon | none | function | returns selected Item icon |
-| badgeText | none | string or number | text for Item badge |
-| renderBadge | none | function | returns Item badge |
-| title | none | string | Item title |
-| titleStyle | inherited | style | styling for Item title |
-| selectedTitleStyle | none | style | styling for selected Item title |
-| tabStyle | inherited | style | styling for tab |
-| selected | none | boolean | return whether the item is selected |
-| onPress | none | function | onPress method for Item |
-| allowFontScaling | false | boolean | allow font scaling for title |
-| accessible | none | boolean | indicates if this item is an accessibility element |
-| accessibilityLabel | none | string | override text for screen readers |
-| testID | none | string | used to locate this item in end-to-end-tests |
+本项目基于 [The MIT License (MIT)](https://github.com/ptomasroos/react-native-tab-navigator/blob/master/LICENSE) ，请自由地享受和参与开源。
