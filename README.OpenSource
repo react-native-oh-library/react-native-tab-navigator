@@ -1,0 +1,11 @@
+[
+    {
+        "Name": "react-native-tab-navigator",
+        "License": "MIT License",
+        "License File": "https://github.com/ptomasroos/react-native-tab-navigator/blob/master/LICENSE",
+        "Version Number": "0.3.4",
+        "Owner" : "xiafeng@huawei.com",
+        "Upstream URL": "https://github.com/ptomasroos/react-native-tab-navigator",
+        "Description": "A tab bar that switches between scenes, written in JS for cross-platform support"
+    }
+]
